@@ -1,1 +1,1 @@
-<?php `git pull github master`;
+<?php `git pull`;

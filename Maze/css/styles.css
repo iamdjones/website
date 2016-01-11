@@ -137,6 +137,7 @@ h1{
     border-radius: 100%;
     content:'hi';
     position:relative;
+    cursor: crosshair;
 }
 .color0:after{
     box-shadow:0 0 0px 100px hsla(145, 100%, 50%,.1);

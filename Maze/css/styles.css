@@ -176,6 +176,7 @@ h1{
 }
 .circle:hover:after{
     opacity: 1;
+    color:red;
 }
 
 

@@ -99,7 +99,7 @@ $sides = $canvas.width() / ($boxSize - $boxMargin) * $canvas.height() / $boxSize
 
 
     $(document.body).on('click', '.box', function () {
-        $(this).css({'visibility': 'hidden', 'animation': 'none'});
+        $(this).css({'background': 'transparent', 'animation': 'none'});
     });
 
     $(document.body).on('click', '.circle', function(){

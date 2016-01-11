@@ -103,7 +103,7 @@ $sides = $canvas.width() / ($boxSize - $boxMargin) * $canvas.height() / $boxSize
     });
 
     $(document.body).on('click', '.circle', function(){
-        $(this).css({background:'hsla(100,100%,90%,.1)'});
+        $(this).attr('class','circle clicked');
     });
 
 });

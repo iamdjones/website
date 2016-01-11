@@ -18,6 +18,6 @@ and open the template in the editor.
                 <a href="blog/20160107">Blogs in progress</a>
 
                 <a href="Maze">Maze</a>
-                  
+                   
     </body>
 </html>

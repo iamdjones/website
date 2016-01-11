@@ -1,0 +1,230 @@
+body{
+
+    text-align:center;
+    background:black;
+    color:white;
+    font-family:cambria;
+    overflow:hidden;
+    margin:0;
+    padding:0;
+    
+}
+
+#dj{
+    width:50px;
+    height:50px;
+    background:hsl(135,50%,50%);
+    text-align:left;
+    display:inline-block;
+    text-align:center;
+    border:2px solid white;
+    margin-right:20px;
+    cursor:pointer;
+    transition: background .1s linear;
+}
+
+#dj:hover{
+    background:hsl(135,50%,40%);
+}
+
+#divider{
+    width:2px;
+    height:100%;
+    background:white;
+    display:inline-block;
+        vertical-align: middle;
+
+}
+
+#dj:before, #dj:after{
+    content:'';
+    display:inline-block;
+    position:relative;
+    width:22%;
+    height:50%;
+    background:transparent;
+        vertical-align: middle;
+        
+
+}
+
+#dj:before{
+    border-left:2px solid white;
+}
+
+#dj:after{
+    border-right:2px solid white;
+    border-top:2px solid white;
+}
+
+
+
+h1{
+    color:white;
+    background:black;
+    margin:0;
+    text-align:left;
+    text-shadow: -1px 0px 1px green;
+    position:relative;
+        line-height: 0;
+
+}
+
+#paypal{
+    float:right;
+    display:inline-block;
+    cursor:pointer;
+}
+
+#paypal form{
+    margin-bottom:0;
+}
+
+#paypal *{
+    display:inline-block;
+}
+
+#donate{
+    position:relative;
+    top:-7px;
+    background:none;
+    border:none;
+    color:hsl(135,50%,70%);
+    font-family:'FontAwesome';
+    font-size:2em;
+        cursor:pointer;
+        
+    transition: color .3s ease-in-out;
+    
+}
+
+#donate:hover{
+    color:hsl(135,50%,60%);
+}
+
+.box{
+
+    display:inline-block;
+    cursor:pointer;
+    background:hsla(0,0%,0%, .05);
+    /*animation:alive 5s infinite linear;*/
+}
+
+#panel{
+    position:absolute;
+    z-index:-2;
+    background:gray;
+    overflow:hidden;
+    left:-50px;
+    top:-50px;
+}
+
+
+
+#whoa{
+    position:absolute;
+    background:red;
+    left:-10%;
+    top:-10%;
+    width:120%;
+    height:120%;
+    z-index:2;
+}  
+ 
+.circle{
+    display:inline-block;
+    border-radius: 100%;
+    content:'hi';
+    position:relative;
+}
+.color0:after{
+    box-shadow:0 0 0px 100px hsla(145, 100%, 50%,.1);
+   
+
+}
+
+.color1:after{
+    box-shadow:0 0 0px 50px hsla(145, 50%, 50%, .1);
+
+}
+
+.color2:after{
+    box-shadow:0 0 0px 25px hsla(145, 20%, 50%, .1);
+
+}
+.color3:after{
+    box-shadow: 0 0 0px 12.5px hsla(145, 20%, 20%, .1);
+}
+.circle:after{
+    content:'';
+    display:inline-block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100px;
+    height:100px;
+    border-radius:100%;
+    background:transparent;
+    /* box-shadow:1px 0 300px 0px blue; */
+    opacity:1;
+    transition:opacity .3s ease-in-out;
+    z-index: -1;
+    /*animation: alive 1s infinite linear;*/
+}
+.circle:hover:after{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes template{
+    0%{
+        
+    }
+    100%{
+        
+    }
+}
+@keyframes test{
+    0%{
+        
+    }
+    100%{
+        
+    }
+}
+@keyframes alive{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes box99{
+    0%{
+              transform:rotate(0deg);
+  
+    }
+    100%{
+                transform:rotate(360deg);
+
+    }
+}
+
+@keyframes djColor{
+    0%{
+        background:hsl(135,50%,60%)
+    }
+    100%{
+        background:hsl(135,50%, 50%);
+    }
+}

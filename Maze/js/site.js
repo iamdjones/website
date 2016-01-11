@@ -2,7 +2,7 @@
 
 $(function () {
 
-    $root = $(document.body);
+    $root = $(window);
     $canvas = $('<div id="panel">');
     $canvas.width($root.width() + 100);
     $canvas.height($root.height() + 100);
@@ -99,7 +99,8 @@ $sides = $canvas.width() / ($boxSize - $boxMargin) * $canvas.height() / $boxSize
 
 
     $(document.body).on('click', '.box', function () {
-        $(this).css({'background': 'hsla(135,100%,90%, .1)', 'animation': 'none'});
+        $(this).parent().remove(this);
+        //$(this).css({'background': 'hsla(135,100%,90%, .1)', 'animation': 'none'});
     });
 
 

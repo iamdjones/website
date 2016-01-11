@@ -58,7 +58,7 @@ $(function () {
 
 
 
-
+    $root = $('body');
     $styles = $('#styles');
     $canvas = $('<div>')
             .attr('id', 'whoa')

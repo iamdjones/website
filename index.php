@@ -15,6 +15,7 @@ and open the template in the editor.
 
 
         ?>
+        
                 <a href="blog/20160107">Blog's in progress</a>
                 <a href="Maze">Maze</a>
 

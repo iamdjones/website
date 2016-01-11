@@ -99,7 +99,7 @@ $sides = $canvas.width() / ($boxSize - $boxMargin) * $canvas.height() / $boxSize
 
 
     $(document.body).on('click', '.box', function () {
-        $(this).parent().remove(this);
+        $(this).remove();
         //$(this).css({'background': 'hsla(135,100%,90%, .1)', 'animation': 'none'});
     });
 

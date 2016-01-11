@@ -132,7 +132,6 @@ h1{
     z-index:2;
     pointer-events: none;
 }  
- 
 .circle{
     display:inline-block;
     border-radius: 100%;
@@ -167,7 +166,7 @@ h1{
     width:100px;
     height:100px;
     border-radius:100%;
-    background:transparent;
+    background:red;
     /* box-shadow:1px 0 300px 0px blue; */
     opacity:1;
     transition:opacity .3s ease-in-out;
@@ -176,7 +175,6 @@ h1{
 }
 .circle:hover:after{
     opacity: 1;
-    color:red;
 }
 
 

@@ -117,6 +117,7 @@ h1{
     overflow:hidden;
     left:-50px;
     top:-50px;
+    cursor:crosshair;
 }
 
 

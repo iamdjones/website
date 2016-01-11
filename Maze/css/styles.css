@@ -123,7 +123,7 @@ h1{
 
 #whoa{
     position:absolute;
-    background:red;
+    background:transparent;
     left:-10%;
     top:-10%;
     width:120%;

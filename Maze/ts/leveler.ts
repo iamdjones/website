@@ -18,4 +18,5 @@ class Startup {
     private set Derp(v: number){
         this._derp = v;
     }
+    
 }

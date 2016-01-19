@@ -10,6 +10,11 @@ body{
     
 }
 
+html,body{
+        width:100%;
+    height:100%;
+}
+
 #dj{
     width:50px;
     height:50px;
@@ -106,13 +111,18 @@ h1{
 
     display:inline-block;
     cursor:pointer;
-    background:hsla(0,0%,0%, .05);
+    background:hsla(0,90%,50%, .05);
     /*animation:alive 5s infinite linear;*/
+    z-index: auto;
+    pointer-events:all;
+}
+
+.box.click{
+    pointer-events:none;
 }
 
 #panel{
     position:absolute;
-    z-index:-2;
     background:gray;
     overflow:hidden;
     left:-50px;
@@ -120,17 +130,21 @@ h1{
     cursor:crosshair;
 }
 
-
+.box:hover{
+    cursor:all-scroll;
+}
+.circle:hover{
+    cursor: grab;
+}
 
 #whoa{
     position:absolute;
-    background:transparent;
+    background:hsla(0,0%,0%,.5);
+    pointer-events: none;
     left:-10%;
     top:-10%;
     width:120%;
     height:120%;
-    z-index:2;
-    pointer-events: none;
 }  
 .circle{
     display:inline-block;
@@ -177,15 +191,18 @@ h1{
     opacity: 1;
 }
 
+.circle.clicked:after{
+box-shadow: none;
+}
 
 
+.moused{
+    background:green;
+}
 
-
-
-
-
-
-
+.level{
+    z-index:8999;
+}
 @keyframes template{
     0%{
         

@@ -1,9 +1,13 @@
 /// references audio.js
 
 $(function () {
+    cheatMode = false;
+    megaCheatMode = false;
+    lawnMower = false;
 
     $root = $(window);
-    $canvas = $('<div id="panel">');
+    $canvas = $('<div id="panel">')
+            .attr('class', 'level');
     $canvas.width($root.width() + 100);
     $canvas.height($root.height() + 100);
 
@@ -16,8 +20,11 @@ $(function () {
 
     $colors = {0: 'green', 1: 'red', 2: 'white'};
     for (n = 0; n < $limit * 100; n++) {
-        $("<div class='circle color" + n % 4 + "'>").width($size).height($size).appendTo($canvas);
+        $barf = $("<div class='circle sprite color" + n % 4 + "'>").width($size).height($size).appendTo($canvas);
+        if(n===231){
+            $barf.addClass('lawn-mower');
 
+        }
     }
 
     waitTime = 0;
@@ -59,16 +66,18 @@ $(function () {
 
 
     $root = $('body');
+
     $styles = $('#styles');
     $canvas = $('<div>')
             .attr('id', 'whoa')
+            .attr('class', 'level')
             .appendTo($root);
     $boxSize = $canvas.height() / 3.0;
     $boxMargin = .9 * $boxSize;
 
 
-$sides = $canvas.width() / ($boxSize - $boxMargin) * $canvas.height() / $boxSize;
-     var $delta = 360 / $sides * 100;
+    $sides = $canvas.width() / ($boxSize - $boxMargin) * $canvas.height() / $boxSize;
+    var $delta = 360 / $sides * 100;
 
     for ($n = 0; $n < $sides; $n++) {
 
@@ -86,7 +95,7 @@ $sides = $canvas.width() / ($boxSize - $boxMargin) * $canvas.height() / $boxSize
             'margin-left': -$boxMargin + 'px'
         };
 
-        $box = $('<div id="' + $id + '" class="box"></div>')
+        $box = $('<div id="' + $id + '" class="box sprite"></div>')
                 .width($boxSize)
                 .height($boxSize)
                 .css($boxStyles)
@@ -96,14 +105,67 @@ $sides = $canvas.width() / ($boxSize - $boxMargin) * $canvas.height() / $boxSize
 
 //        $box.animate({'transform':'rotate(360deg)'}, {duration:1000});
     }
-
-
+//
+//    $(document.body).click(function (e) {
+//        console.log('doc clicked');
+//        return true;
+//    });
     $(document.body).on('click', '.box', function () {
-        $(this).css({'background': 'transparent', 'animation': 'none', 'pointer-events':'none'});
+        $(this).css({'background': 'transparent'});
+        $(this).stop();
+        $(this).attr('class', 'box click');
+        $(this).addClass('click');
+        console.log('box click');
     });
 
-    $(document.body).on('click', '.circle', function(){
-        $(this).attr('class','circle clicked');
+    $(document.body).on('click', '.circle', function () {
+        $(this).addClass('clicked');
+        if($(this).hasClass('lawn-mower')){
+            $('.sprite').on('mouseout', function(){
+                $(this).click();
+            });
+        }
     });
+
+    if (cheatMode) {
+        $(document.body).on('mouseover', '.sprite', function () {
+            $(this).addClass('moused');
+        });
+
+        $(document.body).on('mouseout', '.sprite', function () {
+            if (!megaCheatMode) {
+                $(this).removeClass('moused');
+
+            }
+        });
+    }
+
+
+
+    var levels = $('.level');
+    currentLevel = 0;
+
+    function modulooso() {
+        currentLevel++;
+        currentLevel = currentLevel % 2;
+        console.log(currentLevel);
+    }
+    
+    
+
+    $(document).keyup(function (e) {
+        switch (e.keyCode) {
+            case 70:
+                modulooso();
+                levels.css({display: 'none'});
+                levels.eq(currentLevel).css({display: 'block'});
+            case 71:
+                
+        }
+
+    });
+
+
+
 
 });

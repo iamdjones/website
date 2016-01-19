@@ -3,13 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>   
-        <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">-->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
         <script src="js/jquery-2.1.4.min.js"></script>
         <script src="js/audio.js" type="text/javascript"></script>
         <script src="js/site.js" type="text/javascript"></script>
     </head>
     <body>
-        <style id="styles"></style>
+        <style id="styles"></style> 
         <h1>
             <div id="dj"><div id="divider"></div></div>
             IAMDJONES
